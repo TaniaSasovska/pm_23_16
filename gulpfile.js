@@ -30,11 +30,9 @@ function scripts()
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream());
 }
-async function images()
-{
-    const imagemin = (await import('gulp-imagemin')).default;
-    return src('src/app/imgs/**/*')
-        .pipe(imagemin())
+function images()
+{  
+    return src('src/app/imgs/**/*', {encoding: false})
         .pipe(dest('dist/imgs'))
         .pipe(browserSync.stream());
 }
@@ -46,7 +44,8 @@ function browsersync()
         server: {
             baseDir: 'dist'
         },
-        notify: false
+        notify: false,
+        browser: 'chrome'
     });
 }
 function watching()
