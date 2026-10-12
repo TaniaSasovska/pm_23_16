@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TaniaSasovska/pm_23_16#readme",
   "devDependencies": {
+    "bootstrap": "^5.3.8",
     "browser-sync": "^3.0.4",
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
@@ -27,7 +28,7 @@
     "gulp-imagemin": "^9.2.0",
     "gulp-sass": "^6.0.1",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.104.1"
+    "sass": "^1.105.1"
   },
   "dependencies": {
     "gulp-clean-css": "^4.3.0"

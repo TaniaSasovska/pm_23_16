@@ -55,6 +55,19 @@ function watching()
     watch(['src/app/js/**/*.js'], scripts);
     watch(['src/app/imgs/**/*'], images);
 }
+function copyBootstrapCSS()
+{
+    return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(dest('dist/css'));
+}
+function copyBootstrapJS()
+{
+    return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    .pipe(dest('dist/js'));
+}
+
+exports.bootstrap = parallel(copyBootstrapCSS, copyBootstrapJS);
+exports.default = parallel(copyBootstrapCSS, copyBootstrapJS, /* інші ваші таски: scss, html, build тощо */);
 
 exports.default = series(
   parallel(html, styles, scripts, images),

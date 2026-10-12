@@ -1,6 +1,12 @@
-$accent-color: #ef0000;
-$bg-color: #fb0808;
-$text-color: #000000;
+$accent-color: #22212f;
+$bg-color: #ffffff;
+$bg-color1: #fecb00;
+$text-color: #555555;
+$text-color1: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap');
+$font-primary: 'Lato', sans-serif;
+$font-heading: 'Montserrat', sans-serif;
+
 
 body {
   font-family: 'Courier New', Courier, monospace;

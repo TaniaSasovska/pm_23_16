@@ -4,10 +4,15 @@
     @@include('components/header.html')
 </head>   
 <body>
-    <main class="card">
-        <h1>Hello World!</h1>
-        <p>My first Gulp & SCSS project is working successfully!</p>
-        <img src="imgs/images.png" alt="Project image">
+    <main class="card-container">
+        <div class="row">
+            @@include('components/sidebar.html')
+            <div class="col-md-8 main-content">
+                @@include('components/top-header.html')
+                @@include('components/experience.html')
+                @@include('components/expertise.html')
+            </div>
+        </div>
     </main>
     <script src="js/main.min.js"></script>
 </body>
