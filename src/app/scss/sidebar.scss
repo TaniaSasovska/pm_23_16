@@ -1,3 +1,133 @@
-//body{
-//font-family: Montserrat
-//}
+@use "variables" as *;
+@use "sass:color";
+
+/* --- ВЕРХНЯ ЧАСТИНА (ЛОКАЦІЯ) --- */
+.sidebar-top {
+    background-color: $bg-color1;
+    min-height: 120px;
+    // Вимога: Наслідування стилів за допомогою @extend
+    @extend %flex-center; 
+}
+
+/* Вимога: Вкладеність селекторів */
+.location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    .location-icon {
+        font-size: 28px;
+        color: $accent-color;
+    }
+    
+    .location-text {
+        text-align: left;
+        color: $text-color;
+        
+        p { 
+            margin: 0; 
+            font-size: 14px; 
+        }
+        
+        strong { 
+            color: $accent-color; 
+        }
+    }
+}
+
+/* --- СЕРЕДНЯ ЧАСТИНА (ФОТО) --- */
+.sidebar-middle {
+    background-color: $accent-color;
+    min-height: 350px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.photo-wrapper {
+    width: 100%;
+    height: 100%;
+    
+    .profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: center;
+        filter: grayscale(30%) sepia(20%) hue-rotate(10deg);
+    }
+}
+
+/* --- НИЖНЯ ЧАСТИНА (ОСВІТА ТА ХОБІ) --- */
+.sidebar-bottom {
+    background-color: $bg-color1;
+    flex-grow: 1;
+    padding: 3rem 4rem; 
+}
+
+.education, .hobbies {
+    h2 {
+        // Вимога: Підключення міксіна
+        @include section-title($accent-color); 
+        border-bottom: 2px solid color.adjust($bg-color1, $lightness: -15%);  
+        padding-bottom: 8px;
+        // Вимога: Математичні операції
+        margin-bottom: 15px * 2; 
+    }
+}
+
+.education {
+    margin-bottom: 3rem;
+    
+    article {
+        margin-bottom: 25px;
+        
+        h3 {
+            font-family: $font-heading;
+            font-size: 16px;
+            font-weight: 700;
+            color: $accent-color;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        
+        p {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+            color: $text-color;
+        }
+        
+        .date {
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    
+    li {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 8px;
+            mix-blend-mode: multiply;
+        }
+        
+        p {
+            font-size: 12px;
+            margin: 0;
+            color: $accent-color;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@use "variables" as *;
+@use "sass:color";
+
+.section-title {
+    @include section-title($accent-color);
+    border-bottom: 2px solid $border-color;
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+
+/* --- СЕКЦІЯ EXPERIENCE --- */
+.experience {
+    margin-bottom: 40px;
+
+    article {
+        margin-bottom: 30px;
+
+        h3 {
+            font-family: $font-heading;
+            font-size: 18px;
+            font-weight: 700;
+            color: $text-color;
+            margin-bottom: 10px;
+        }
+
+        .job-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+
+            .date-badge {
+                background-color: $accent-color;
+                color: $text-color1;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 4px 12px;
+                border-radius: 4px; // Робить злегка заокруглені квадратики
+            }
+
+            .company {
+                font-size: 14px;
+                font-weight: 600;
+                color: color.adjust($text-color, $lightness: 20%);
+            }
+        }
+
+        p {
+            font-size: 14px;
+            color: $text-color;
+            line-height: 1.6;
+            margin: 0;
+        }
+    }
+}
+
+/* --- СЕКЦІЯ EXPERTISE --- */
+.expertise {
+    .expertise-list {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            
+            // Базова світло-сіра рамка
+            border: 6px solid #e0e0e0;
+            
+            // Темна частина рамки, що імітує заповненість
+            border-top-color: $accent-color;
+            border-left-color: $accent-color;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            font-size: 12px;
+            font-weight: 700;
+            color: $accent-color;
+        }
+    }
+}

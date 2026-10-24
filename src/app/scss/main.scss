@@ -1,47 +1,33 @@
-$accent-color: #22212f;
-$bg-color: #ffffff;
-$bg-color1: #fecb00;
-$text-color: #555555;
-$text-color1: #ffffff;
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap');
-$font-primary: 'Lato', sans-serif;
-$font-heading: 'Montserrat', sans-serif;
-
+@use "variables" as *;
+@use "sidebar";
+@use "top-header";
+@use "_main";
 
 body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: $bg-color;
-  color: $text-color;
-  //margin: 0;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
+    font-family: $font-primary;
+    background-color: #f4f4f4; // Сірий фон навколо резюме
+    color: $text-color;
 }
 
-.card {
-  background: #f9d1d1;
-  padding: 24px;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 100%;
-  text-align: center;}
+.resume-wrapper {
+    max-width: 1100px; // Обмеження для макета
+    margin: 0 auto; // Центрує макет, якщо Bootstrap-клас перебивається
+    background-color: $bg-color;
+}
 
-  h1 {
-    margin-top: 0;
-    color: $accent-color;
-    margin-top: 0;
-  }
+// Кастомні ширини колонок, щоб жовта була трохи вужчою
+.sidebar-col {
+    flex: 0 0 32%;
+    max-width: 32%;
+}
+.main-col {
+    flex: 0 0 68%;
+    max-width: 68%;
+}
 
-  p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  img
-  {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 15px auto;
-    border-radius: 10px;
-  }
+.bg-yellow { background-color: $bg-color1; }
+.bg-dark-blue { background-color: $accent-color; color: $text-color1; }
+.bg-white { background-color: $bg-color; }
+
+.sync-top { height: 120px; }
+.sync-middle { height: 350px; }

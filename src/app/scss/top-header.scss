@@ -1,0 +1,120 @@
+@use "variables" as *;
+@use "sass:color";
+
+/* --- БЛОК КОНТАКТІВ (Білий фон) --- */
+.top-contacts {
+    background-color: $bg-color;
+    min-height: 120px;
+    padding: 0 4rem; 
+    margin: 0;
+    
+    // Переносимо flex-властивості з HTML
+    display: flex;
+    align-items: center; 
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; // Заміна класу text-start
+    }
+
+    .contact-label {
+        margin: 0 0 5px 0;
+        color: color.adjust($text-color, $lightness: 30%); 
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .contact-link {
+        color: $text-color; 
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $bg-color1;
+        }
+    }
+}
+
+/* --- ГОЛОВНА ШАПКА (Темно-синій фон) --- */
+.main-header {
+    background-color: $accent-color;
+    min-height: 350px; 
+    padding: 0 4rem; 
+    color: $text-color1;
+    
+    // Переносимо flex-властивості з HTML
+    display: flex;
+    align-items: center; 
+    
+    .info {
+        width: 100%;
+        
+        .main-title {
+            font-family: $font-heading;
+            font-size: 56px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            line-height: 1.1;
+            
+            strong {
+                position: relative;
+                display: inline-block;
+                
+                // Жовта лінія ПІД прізвищем згідно з макетом
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    height: 4px;
+                    // Використання математичних операцій (вимога Лаб 3)
+                    width: 106px * 2.5; 
+                    background-color: $bg-color1;
+                }
+            }
+        }
+        
+        .sub-title {
+            font-family: $font-heading;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $text-color1; 
+            letter-spacing: 3px;
+            margin-top: 35px; // Відступ враховує жовту лінію
+            margin-bottom: 20px;
+        }
+        
+        .description-text {
+            font-size: 14px;
+            color: color.adjust($text-color1, $lightness: -30%); 
+            line-height: 1.6;
+            margin: 0 0 25px 0; // Замінює клас mb-4
+            max-width: 550px;
+        }
+        
+        /* СТИЛІЗАЦІЯ КНОПКИ (заміна класів btn-warning, rounded-0, px-4, py-2) */
+        .contact-btn {
+            background-color: $bg-color1;
+            color: $accent-color;
+            border: none;
+            border-radius: 0; 
+            padding: 10px 32px; 
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            
+            &:hover {
+                background-color: color.adjust($bg-color1, $lightness: -10%);
+            }
+        }
+    }
+}

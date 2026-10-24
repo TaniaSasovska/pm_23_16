@@ -2,18 +2,25 @@
 <html lang="en">
 <head>
     @@include('components/header.html')
-</head>   
-<body>
-    <main class="card-container">
-        <div class="row">
-            @@include('components/sidebar.html')
-            <div class="col-md-8 main-content">
+</head>
+<body class="bg-light">
+    <div class="container resume-wrapper mx-auto my-5 shadow">
+        <div class="row g-0">
+            <!-- ЛІВА КОЛОНКА -->
+            <div class="col-12 col-md-4 sidebar-col d-flex flex-column">
+                @@include('components/sidebar.html')
+            </div>
+            
+            <!-- ПРАВА КОЛОНКА -->
+            <div class="ccol-12 col-md-8 main-col d-flex flex-column bg-white">
                 @@include('components/top-header.html')
-                @@include('components/experience.html')
-                @@include('components/expertise.html')
+                <div class="px-5 mt-5 flex-grow-1">
+                    @@include('components/experience.html')
+                    @@include('components/expertise.html')
+                </div>
             </div>
         </div>
-    </main>
+    </div>
     <script src="js/main.min.js"></script>
 </body>
 </html>
