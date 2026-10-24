@@ -8,6 +8,7 @@
     margin-bottom: 30px;
 }
 
+
 .experience {
     margin-bottom: 40px;
 
@@ -53,6 +54,7 @@
     }
 }
 
+/* --- СЕКЦІЯ EXPERTISE --- */
 .expertise {
     .expertise-list {
         display: flex;
@@ -66,10 +68,10 @@
             height: 120px;
             border-radius: 50%;
             
-           
+            // Базова світло-сіра рамка
             border: 6px solid #e0e0e0;
             
-           
+            // Темна частина рамки, що імітує заповненість
             border-top-color: $accent-color;
             border-left-color: $accent-color;
             

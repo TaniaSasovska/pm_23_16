@@ -2,6 +2,7 @@
 @use "sass:color";
 
 
+
 .top-contacts {
     background-color: $bg-color;
     min-height: 120px;
@@ -87,6 +88,7 @@
             color: $text-color1; 
             letter-spacing: 3px;
             margin-top: 35px; 
+            margin-top: 35px; 
             margin-bottom: 20px;
         }
         
@@ -94,6 +96,7 @@
             font-size: 14px;
             color: color.adjust($text-color1, $lightness: -30%); 
             line-height: 1.6;
+            margin: 0 0 25px 0; 
             margin: 0 0 25px 0; 
             max-width: 550px;
         }

@@ -10,6 +10,7 @@
 }
 
 
+
 .location {
     display: flex;
     align-items: center;
@@ -36,6 +37,7 @@
 }
 
 
+
 .sidebar-middle {
     background-color: $accent-color;
     min-height: 350px;
@@ -55,6 +57,7 @@
         filter: grayscale(30%) sepia(20%) hue-rotate(10deg);
     }
 }
+
 
 
 .sidebar-bottom {
