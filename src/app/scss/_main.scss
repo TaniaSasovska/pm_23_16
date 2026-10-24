@@ -8,7 +8,7 @@
     margin-bottom: 30px;
 }
 
-/* --- СЕКЦІЯ EXPERIENCE --- */
+
 .experience {
     margin-bottom: 40px;
 
@@ -35,7 +35,7 @@
                 font-size: 11px;
                 font-weight: 700;
                 padding: 4px 12px;
-                border-radius: 4px; // Робить злегка заокруглені квадратики
+                border-radius: 4px; 
             }
 
             .company {
@@ -54,7 +54,7 @@
     }
 }
 
-/* --- СЕКЦІЯ EXPERTISE --- */
+
 .expertise {
     .expertise-list {
         display: flex;
@@ -68,10 +68,7 @@
             height: 120px;
             border-radius: 50%;
             
-            // Базова світло-сіра рамка
             border: 6px solid #e0e0e0;
-            
-            // Темна частина рамки, що імітує заповненість
             border-top-color: $accent-color;
             border-left-color: $accent-color;
             
