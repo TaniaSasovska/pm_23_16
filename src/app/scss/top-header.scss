@@ -1,21 +1,19 @@
 @use "variables" as *;
 @use "sass:color";
 
-/* --- БЛОК КОНТАКТІВ (Білий фон) --- */
+
 .top-contacts {
     background-color: $bg-color;
     min-height: 120px;
     padding: 0 4rem; 
     margin: 0;
-    
-    // Переносимо flex-властивості з HTML
     display: flex;
     align-items: center; 
 
     .contact-item {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; // Заміна класу text-start
+        align-items: flex-start; 
     }
 
     .contact-label {
@@ -39,14 +37,12 @@
     }
 }
 
-/* --- ГОЛОВНА ШАПКА (Темно-синій фон) --- */
+
 .main-header {
     background-color: $accent-color;
     min-height: 350px; 
     padding: 0 4rem; 
     color: $text-color1;
-    
-    // Переносимо flex-властивості з HTML
     display: flex;
     align-items: center; 
     
@@ -65,15 +61,12 @@
             strong {
                 position: relative;
                 display: inline-block;
-                
-                // Жовта лінія ПІД прізвищем згідно з макетом
                 &::after {
                     content: "";
                     position: absolute;
                     left: 0;
                     bottom: -10px;
                     height: 4px;
-                    // Використання математичних операцій (вимога Лаб 3)
                     width: 106px * 2.5; 
                     background-color: $bg-color1;
                 }
@@ -87,7 +80,7 @@
             text-transform: uppercase;
             color: $text-color1; 
             letter-spacing: 3px;
-            margin-top: 35px; // Відступ враховує жовту лінію
+            margin-top: 35px; 
             margin-bottom: 20px;
         }
         
@@ -95,11 +88,10 @@
             font-size: 14px;
             color: color.adjust($text-color1, $lightness: -30%); 
             line-height: 1.6;
-            margin: 0 0 25px 0; // Замінює клас mb-4
+            margin: 0 0 25px 0; 
             max-width: 550px;
         }
         
-        /* СТИЛІЗАЦІЯ КНОПКИ (заміна класів btn-warning, rounded-0, px-4, py-2) */
         .contact-btn {
             background-color: $bg-color1;
             color: $accent-color;
