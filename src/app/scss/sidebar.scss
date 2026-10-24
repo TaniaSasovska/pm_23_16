@@ -1,15 +1,15 @@
 @use "variables" as *;
 @use "sass:color";
 
-/* --- ВЕРХНЯ ЧАСТИНА (ЛОКАЦІЯ) --- */
+
 .sidebar-top {
     background-color: $bg-color1;
     min-height: 120px;
-    // Вимога: Наслідування стилів за допомогою @extend
+
     @extend %flex-center; 
 }
 
-/* Вимога: Вкладеність селекторів */
+
 .location {
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@
     }
 }
 
-/* --- СЕРЕДНЯ ЧАСТИНА (ФОТО) --- */
+
 .sidebar-middle {
     background-color: $accent-color;
     min-height: 350px;
@@ -56,7 +56,7 @@
     }
 }
 
-/* --- НИЖНЯ ЧАСТИНА (ОСВІТА ТА ХОБІ) --- */
+
 .sidebar-bottom {
     background-color: $bg-color1;
     flex-grow: 1;
@@ -65,11 +65,11 @@
 
 .education, .hobbies {
     h2 {
-        // Вимога: Підключення міксіна
+
         @include section-title($accent-color); 
         border-bottom: 2px solid color.adjust($bg-color1, $lightness: -15%);  
         padding-bottom: 8px;
-        // Вимога: Математичні операції
+   
         margin-bottom: 15px * 2; 
     }
 }

@@ -5,17 +5,16 @@
 
 body {
     font-family: $font-primary;
-    background-color: #f4f4f4; // Сірий фон навколо резюме
+    background-color: #f4f4f4; 
     color: $text-color;
 }
 
 .resume-wrapper {
-    max-width: 1100px; // Обмеження для макета
-    margin: 0 auto; // Центрує макет, якщо Bootstrap-клас перебивається
+    max-width: 1100px; 
+    margin: 0 auto; 
     background-color: $bg-color;
 }
 
-// Кастомні ширини колонок, щоб жовта була трохи вужчою
 .sidebar-col {
     flex: 0 0 32%;
     max-width: 32%;
