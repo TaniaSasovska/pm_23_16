@@ -8,18 +8,3 @@ $border-color: #e0e0e0e0;
 $font-primary: 'Lato', sans-serif;
 $font-heading: 'Montserrat', sans-serif;
 
-@mixin section-title($color: $accent-color)
-{
-    font-family: $font-heading;
-    font-size: 24px;
-    font-weight: 700;
-    color: $color;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-%flex-center
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}

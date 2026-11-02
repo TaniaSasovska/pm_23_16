@@ -2,11 +2,12 @@
 @use "sidebar";
 @use "top-header";
 @use "_main";
+@use "mixin" as *;
+@use "templates" as *;
 
 body {
     font-family: $font-primary;
-    background-color: #f4f4f4; 
-    background-color: #f4f4f4; 
+    background-color: $border-color; 
     color: $text-color;
 }
 
@@ -14,17 +15,22 @@ body {
     max-width: 1100px; 
     margin: 0 auto; 
     max-width: 1100px; 
-    margin: 0 auto; 
     background-color: $bg-color;
+    padding-top: 30px;    
+    padding-right: 0;     
+    padding-bottom: 30px;    
+    padding-left: 30px;
 }
 
 .sidebar-col {
     flex: 0 0 32%;
     max-width: 32%;
+    display: flex;
 }
 .main-col {
     flex: 0 0 68%;
     max-width: 68%;
+    display: flex;
 }
 
 .bg-yellow { background-color: $bg-color1; }

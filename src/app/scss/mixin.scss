@@ -1,0 +1,8 @@
+@use "variables" as *;
+@mixin section-title($color: $accent-color) {
+    font-family: $font-heading;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color;
+    letter-spacing: 1px;
+}

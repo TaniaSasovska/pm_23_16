@@ -1,4 +1,6 @@
 @use "variables" as *;
+@use "mixin" as *;
+@use "templates" as *;
 @use "sass:color";
 
 
@@ -8,8 +10,6 @@
 
     @extend %flex-center; 
 }
-
-
 
 .location {
     display: flex;
@@ -23,7 +23,7 @@
     
     .location-text {
         text-align: left;
-        color: $text-color;
+        color: color.adjust($accent-color, $lightness: 10%);
         
         p { 
             margin: 0; 
@@ -31,7 +31,7 @@
         }
         
         strong { 
-            color: $accent-color; 
+            color: color.adjust($accent-color, $lightness: 10%); 
         }
     }
 }
@@ -72,7 +72,9 @@
         @include section-title($accent-color); 
         border-bottom: 2px solid color.adjust($bg-color1, $lightness: -15%);  
         padding-bottom: 8px;
-   
+        width: 300px;
+        display: block;
+        padding-right: 170px;
         margin-bottom: 15px * 2; 
     }
 }
@@ -113,24 +115,31 @@
     justify-content: space-between;
     
     li {
-        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        gap: 8px; 
         
         img {
-            width: 35px;
+            box-sizing: border-box; 
+            width: 35px; 
             height: 35px;
-            margin-bottom: 8px;
+            border: 2px solid $accent-color;
+            border-radius: 50%;
+            padding: 5px; 
+            
             mix-blend-mode: multiply;
+            object-fit: contain; 
         }
         
         p {
+            padding: 2px;
             font-size: 12px;
             margin: 0;
             color: $accent-color;
             font-weight: 600;
-            text-transform: uppercase;
+            
         }
     }
 }

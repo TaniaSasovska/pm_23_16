@@ -1,4 +1,6 @@
 @use "variables" as *;
+@use "mixin" as *;
+@use "templates" as *;
 @use "sass:color";
 
 .section-title {
@@ -6,8 +8,10 @@
     border-bottom: 2px solid $border-color;
     padding-bottom: 8px;
     margin-bottom: 30px;
-}
+    width: 680px;
+    display: block;
 
+}
 
 .experience {
     margin-bottom: 40px;
@@ -64,25 +68,50 @@
         margin: 0;
 
         li {
-            width: 120px;
-            height: 120px;
+            $size: 100px;
+            $border-width: 6px;
+            $percent: 75%;
+
+            width: $size;
+            height: $size;
             border-radius: 50%;
-            
-         
-            border: 6px solid #e0e0e0;
-            
-           
-            border-top-color: $accent-color;
-            border-left-color: $accent-color;
-            
+                      
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            box-sizing: border-box;
             
             font-size: 12px;
             font-weight: 700;
             color: $accent-color;
+            
+            border: $border-width solid $border-color;
+            &::before {
+                content: '';
+                position: absolute;
+                inset: -$border-width; 
+                border-radius: 50%;
+                border: $border-width solid transparent;
+                border-top-color: $accent-color;
+                border-left-color: $accent-color;
+                border-bottom-color: $accent-color;
+                transform: rotate(-45deg);
+                box-sizing: border-box;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: $border-width;
+                height: $border-width;
+                border-radius: 50%;
+                background-color: $accent-color;
+       
+                top: -$border-width;
+                left: calc(50% - #{$border-width} / 2);
+                box-shadow: 48px 49px 0 0 $accent-color;
+            }
         }
     }
 }
