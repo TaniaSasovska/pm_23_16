@@ -1,6 +1,6 @@
-@use "variables" as *;
-@use "mixin" as *;
-@use "templates" as *;
+@use "_variables" as *;
+@use "_mixin" as *;
+@use "_templates" as *;
 @use "sass:color";
 
 
@@ -8,30 +8,30 @@
     background-color: $bg-color1;
     min-height: 120px;
 
-    @extend %flex-center; 
+    @extend %flex-center;
 }
 
 .location {
     display: flex;
     align-items: center;
     gap: 20px;
-    
+
     .location-icon {
         font-size: 28px;
         color: $accent-color;
     }
-    
+
     .location-text {
         text-align: left;
         color: color.adjust($accent-color, $lightness: 10%);
-        
-        p { 
-            margin: 0; 
-            font-size: 14px; 
+
+        p {
+            margin: 0;
+            font-size: 14px;
         }
-        
-        strong { 
-            color: color.adjust($accent-color, $lightness: 10%); 
+
+        strong {
+            color: color.adjust($accent-color, $lightness: 10%);
         }
     }
 }
@@ -48,11 +48,11 @@
 .photo-wrapper {
     width: 100%;
     height: 100%;
-    
+
     .profile-img {
         width: 100%;
         height: 100%;
-        object-fit: cover; 
+        object-fit: cover;
         object-position: center;
         filter: grayscale(30%) sepia(20%) hue-rotate(10deg);
     }
@@ -63,28 +63,37 @@
 .sidebar-bottom {
     background-color: $bg-color1;
     flex-grow: 1;
-    padding: 3rem 4rem; 
+    padding: 3rem 0 3rem 4rem;
 }
 
-.education, .hobbies {
+.education,
+.hobbies {
+    padding-right: 2rem;
     h2 {
 
-        @include section-title($accent-color); 
-        border-bottom: 2px solid color.adjust($bg-color1, $lightness: -15%);  
+        @include section-title($accent-color);
+        border-bottom: 2px solid color.adjust($bg-color1, $lightness: -15%);
         padding-bottom: 8px;
-        width: 300px;
-        display: block;
-        padding-right: 170px;
-        margin-bottom: 15px * 2; 
+        margin-bottom: 30px;
+        
+
+        width: calc(100% + 2rem);
+        padding-right: 2rem; 
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
     }
 }
 
 .education {
     margin-bottom: 3rem;
-    
+
     article {
         margin-bottom: 25px;
-        
+
         h3 {
             font-family: $font-heading;
             font-size: 16px;
@@ -93,13 +102,13 @@
             margin-bottom: 4px;
             text-transform: uppercase;
         }
-        
+
         p {
             margin: 0 0 4px 0;
             font-size: 14px;
             color: $text-color;
         }
-        
+
         .date {
             font-weight: bold;
             margin: 0;
@@ -113,33 +122,33 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-    
+
     li {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 8px; 
-        
+        gap: 8px;
+
         img {
-            box-sizing: border-box; 
-            width: 35px; 
+            box-sizing: border-box;
+            width: 35px;
             height: 35px;
             border: 2px solid $accent-color;
             border-radius: 50%;
-            padding: 5px; 
-            
+            padding: 5px;
+
             mix-blend-mode: multiply;
-            object-fit: contain; 
+            object-fit: contain;
         }
-        
+
         p {
             padding: 2px;
             font-size: 12px;
             margin: 0;
             color: $accent-color;
             font-weight: 600;
-            
+
         }
     }
 }

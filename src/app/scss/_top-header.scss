@@ -1,6 +1,6 @@
-@use "variables" as *;
-@use "mixin" as *;
-@use "templates" as *;
+@use "_variables" as *;
+@use "_mixin" as *;
+@use "_templates" as *;
 @use "sass:color";
 
 
@@ -8,12 +8,12 @@
 .top-contacts {
     background-color: $bg-color;
     min-height: 120px;
-    padding: 0 4rem; 
+    padding: 0 4rem;
     margin: 0;
-    
+
 
     display: flex;
-    align-items: center; 
+    align-items: center;
 
     .contact-item {
         display: flex;
@@ -23,19 +23,19 @@
 
     .contact-label {
         margin: 0 0 5px 0;
-        color: color.adjust($accent-color, $lightness: 10%); 
+        color: color.adjust($accent-color, $lightness: 10%);
         font-size: 15px;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
-    
+
     .contact-link {
-        color: $text-color; 
+        color: $text-color;
         text-decoration: none;
         font-size: 14px;
         font-weight: 400;
         transition: color 0.3s ease;
-        
+
         &:hover {
             color: $bg-color1;
         }
@@ -45,15 +45,15 @@
 
 .main-header {
     background-color: $accent-color;
-    min-height: 350px; 
-    padding: 0 4rem; 
+    min-height: 350px;
+    padding: 0 4rem;
     color: $text-color1;
     display: flex;
-    align-items: center; 
-    
+    align-items: center;
+
     .info {
         width: 100%;
-        
+
         .main-title {
             font-family: $font-heading;
             font-size: 56px;
@@ -62,42 +62,57 @@
             letter-spacing: 2px;
             margin: 0;
             line-height: 1.1;
-            
+
             strong {
                 position: relative;
                 display: inline-block;
-                
+
                 &::after {
                     content: "";
                     position: absolute;
                     left: 0;
                     bottom: -10px;
                     height: 4px;
-                    width: 106px * 2.5; 
+                    width: 106px * 2.5;
                     background-color: $bg-color1;
                 }
             }
         }
-        
+
         .sub-title {
             font-family: $font-heading;
             font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
-            color: $text-color1; 
+            color: $text-color1;
             letter-spacing: 3px;
-            margin-top: 35px; 
-            margin-top: 35px; 
+            margin-top: 35px;
+            margin-top: 35px;
             margin-bottom: 20px;
         }
-        
+
         .description-text {
             font-size: 14px;
-            color: color.adjust($text-color1, $lightness: -30%); 
+            color: color.adjust($text-color1, $lightness: -30%);
             line-height: 1.6;
-            margin: 0 0 25px 0; 
-            margin: 0 0 25px 0; 
+            margin: 0 0 25px 0;
+            margin: 0 0 25px 0;
             max-width: 550px;
         }
     }
+}
+
+.hidden {
+    display: none;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.arrow {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s;
 }

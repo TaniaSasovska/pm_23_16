@@ -1,0 +1,79 @@
+{
+    "personal": {
+        "firstName": "Alex",
+        "lastName": "Brahar"
+    },
+    "education": [
+        {
+            "specialty": "Applied Mathematics",
+            "university": "Lviv Polytechnic National University",
+            "years": "2017-2019"
+        },
+        {
+            "specialty": "Computer Science",
+            "university": "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”",
+            "years": "2010-2013"
+        },
+        {
+            "specialty": "System analysis",
+            "university": "Taras Shevchenko National University of Kyiv",
+            "years": "2007-2009"
+        }
+    ],
+    "hobby": [
+        {
+            "name": "Travel",
+            "image": "imgs/world.png"
+        },
+        {
+            "name": "Music",
+            "image": "imgs/music.png"
+        },
+        {
+            "name": "Writing",
+            "image": "imgs/copywriting.png"
+        },
+        {
+            "name": "Chess",
+            "image": "imgs/chess.png"
+        }
+    ],
+    "experience": [
+        {
+            "position": "Frontend Developer",
+            "period": "Present",
+            "company": "Company Name / Location",
+            "description": "Website development and interface design"
+        },
+        {
+            "position": "Web Designer",
+            "period": "2017-2019",
+            "company": "Company Name / Location",
+            "description": "Creating website designs and working with layouts."
+        },
+        {
+            "position": "Junior Developer",
+            "period": "2015-2017",
+            "company": "Company Name / Location",
+            "description": "Working on web development projects."
+        }
+    ],
+    "expertise": [
+        {
+            "name": "Adobe Photoshop",
+            "level": 80
+        },
+        {
+            "name": "Adobe Illustrator",
+            "level": 70
+        },
+        {
+            "name": "Adobe InDesign",
+            "level": 65
+        },
+        {
+            "name": "PowerPoint",
+            "level": 90
+        }
+    ]
+}
